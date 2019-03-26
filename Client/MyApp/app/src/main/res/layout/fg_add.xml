@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgpic">
+
+    <Button
+        android:id="@+id/fg_add_btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="444dp"
+        android:background="@color/colorLightBrown"
+        android:text="@string/btn_submit"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fg_add_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:background="@color/colorLightBrown"
+        android:text="@string/btn_cancel"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/fg_add_btn_submit"
+        app:layout_constraintTop_toTopOf="@+id/fg_add_btn_submit" />
+
+    <RadioGroup
+        android:id="@+id/fg_add_rbg"
+        android:layout_width="395dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/fg_add_rbtn_get"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fg_add_rbtn_get"
+            android:textColor="@color/colorBrown"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/fg_add_rbtn_send"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/fg_add_rbtn_send"
+            android:textColor="@color/colorBrown"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/fg_add_txt_srcAdr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/fg_add_srcAdr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_rbg"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/fg_add_txt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/fg_add_phoneNum"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_srcAdr"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_txt_srcAdr" />
+
+    <TextView
+        android:id="@+id/fg_add_txt_dstAdr"
+        android:layout_width="112dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/fg_add_dstAdr"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_phone"
+        app:layout_constraintTop_toTopOf="@+id/fg_add_txt_phone" />
+
+    <TextView
+        android:id="@+id/fg_add_txt_timeLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/fg_add_timeLimit"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_dstAdr"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_txt_dstAdr" />
+
+    <TextView
+        android:id="@+id/fg_add_txt_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/fg_add_weight"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_timeLimit"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_txt_timeLimit" />
+
+    <TextView
+        android:id="@+id/fg_add_txt_noteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/fg_add_noteInfo"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_weight"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_txt_weight" />
+
+    <TextView
+        android:id="@+id/fg_add_txt_orderFee"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/fg_add_orderFee"
+        android:textColor="@color/colorBrown"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_txt_weight"
+        app:layout_constraintTop_toTopOf="@+id/fg_add_txt_noteInfo" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_srcAdr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toEndOf="@+id/fg_add_txt_srcAdr"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_rbg" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_phoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_et_srcAdr"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_et_srcAdr" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_dstAdr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_et_phoneNum"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_et_phoneNum" />
+
+    <Spinner
+        android:id="@+id/fg_add_sp_timeLimit"
+        android:layout_width="212dp"
+        android:layout_height="28dp"
+        android:entries="@array/timeLimit"
+
+        app:layout_constraintStart_toStartOf="@+id/fg_add_et_dstAdr"
+        app:layout_constraintTop_toTopOf="@+id/fg_add_txt_timeLimit" />
+
+    <Spinner
+        android:id="@+id/fg_add_sp_weight"
+        android:layout_width="212dp"
+        android:layout_height="28dp"
+        android:entries="@array/weight"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_sp_timeLimit"
+        app:layout_constraintTop_toTopOf="@+id/fg_add_txt_weight" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_noteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_sp_weight"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_sp_weight" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_orderFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toStartOf="@+id/fg_add_sp_weight"
+        app:layout_constraintTop_toBottomOf="@+id/fg_add_et_noteInfo" />
+</android.support.constraint.ConstraintLayout>

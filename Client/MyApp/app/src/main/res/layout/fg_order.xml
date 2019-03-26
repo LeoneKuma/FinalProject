@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/filletrectangle_textview"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Spinner
+        android:id="@+id/fg_order_sp_searchFilter"
+        android:layout_width="140dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/searchFilter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.myapp.EditTextWithDel
+        android:id="@+id/fg_add_et_searchInfo"
+        android:layout_width="202dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorBrown"
+        android:theme="@style/MyEditTextFg"
+        app:layout_constraintStart_toEndOf="@+id/fg_order_sp_searchFilter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/fg_order__imBtn_searchBtn"
+        android:layout_width="46dp"
+        android:layout_height="41dp"
+        app:layout_constraintStart_toEndOf="@+id/fg_add_et_searchInfo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/searchbtn" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="53dp">
+
+        <TextView
+            android:id="@+id/fg_txt_tap_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tap_menu_bg"
+
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/fg_order_tap_myOrder"
+            android:textColor="@drawable/tap_menu_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fg_txt_tap_online"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tap_menu_bg"
+
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/fg_order_tap_OnlineOrder"
+            android:textColor="@drawable/tap_menu_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/fg_txt_tap_accept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tap_menu_bg"
+
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/fg_order_tap_AcceptedOrder"
+            android:textColor="@drawable/tap_menu_text"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fg_order_ly_cotent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/blankArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/blankArea"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="80dp" />
+
+</android.support.constraint.ConstraintLayout>
